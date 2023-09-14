@@ -1,7 +1,4 @@
-// ignore_for_file: prefer_const_constructors
-
-import 'package:coffe_shop/main.dart';
-import 'package:coffe_shop/screens/first_Screen.dart';
+import 'package:coffe_shop/screens/intro_screen.dart';
 import 'package:flutter/material.dart';
 
 class GetStartedScreen extends StatelessWidget {
@@ -10,30 +7,23 @@ class GetStartedScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 209, 106, 69),
+      backgroundColor: const Color.fromARGB(255, 209, 106, 69),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 50.0, vertical: 20),
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
-            shape: new RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(30)),
-            primary: Color.fromARGB(255, 46, 38, 35),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+            backgroundColor: const Color.fromARGB(255, 46, 38, 35),
           ),
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => FirstScreen()),
+              MaterialPageRoute(builder: (context) => const FirstScreen()),
             );
           },
-          // ignore: prefer_const_constructors
-          child: Text(
+          child: const Text(
             'Get started',
-            // ignore: prefer_const_constructors
-            style: TextStyle(
-                color: Colors.white,
-                fontStyle: FontStyle.italic,
-                fontWeight: FontWeight.bold,
-                fontSize: 20),
+            style: TextStyle(color: Colors.white, fontStyle: FontStyle.italic, fontWeight: FontWeight.bold, fontSize: 20),
           ),
         ),
       ),
@@ -44,7 +34,7 @@ class GetStartedScreen extends StatelessWidget {
             Container(
               width: 250,
               height: 350,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('images/coffe1.png'),
                 ),

@@ -1,10 +1,8 @@
 import 'package:coffe_shop/screens/get_started_screen.dart';
 import 'package:flutter/material.dart';
 
-import 'package:flutter/material.dart';
-
 void main() {
-  runApp(Main());
+  runApp(const Main());
 }
 
 class Main extends StatelessWidget {
@@ -12,7 +10,7 @@ class Main extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: GetStartedScreen(),
     );
   }

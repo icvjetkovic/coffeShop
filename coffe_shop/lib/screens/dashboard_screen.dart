@@ -1,13 +1,9 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:coffe_shop/screens/first_Screen.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:coffe_shop/bloc_counter/counter_bloc.dart';
+import 'package:coffe_shop/bloc_counter/counter_state.dart';
+import 'package:coffe_shop/screens/intro_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../blocCounter/CounterBloc.dart';
-import '../blocCounter/CounterState.dart';
 
 class OrderNow extends StatelessWidget {
   const OrderNow({
@@ -35,12 +31,9 @@ class OrderNow extends StatelessWidget {
                   onTap: () => showDialog(
                     context: context,
                     builder: ((context) => AlertDialog(
-                          title:
-                              Text('Successfully ordered' + ' ${coffee.title}'),
+                          title: Text('Successfully ordered' ' ${coffee.title}'),
                           // ignore: prefer_interpolation_to_compose_strings
-                          content: Text('You ordered  ' +
-                              '${counterState.counter}' +
-                              '  amount'),
+                          content: Text('You ordered  ' '${counterState.counter}' '  amount'),
                           actions: [
                             TextButton(
                               onPressed: () => Navigator.pop(context, 'Cancel'),
@@ -59,7 +52,7 @@ class OrderNow extends StatelessWidget {
                           ],
                         )),
                   ),
-                  child: Center(
+                  child: const Center(
                       child: Text(
                     'Order Now',
                     style: TextStyle(fontSize: 20, color: Colors.white),

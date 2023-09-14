@@ -1,10 +1,9 @@
+import 'package:coffe_shop/bloc_counter/counter_bloc.dart';
+import 'package:coffe_shop/bloc_counter/counter_event.dart';
+import 'package:coffe_shop/bloc_counter/counter_state.dart';
+import 'package:coffe_shop/screens/intro_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../blocCounter/CounterBloc.dart';
-import '../blocCounter/CounterEvent.dart';
-import '../blocCounter/CounterState.dart';
-import 'first_Screen.dart';
 
 class CounterWidget extends StatelessWidget {
   final Coffee coffee;
@@ -21,7 +20,7 @@ class CounterWidget extends StatelessWidget {
       children: [
         Container(
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.all(
+              borderRadius: const BorderRadius.all(
                 Radius.circular(30),
               ),
               border: Border.all(color: Colors.white),
@@ -40,7 +39,7 @@ class CounterWidget extends StatelessWidget {
                   builder: (context, counterState) {
                     return Text(
                       '${counterState.counter}',
-                      style: TextStyle(color: Colors.white),
+                      style: const TextStyle(color: Colors.white),
                     );
                   },
                 ),
